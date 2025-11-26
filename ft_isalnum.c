@@ -6,7 +6,7 @@
 /*   By: amigdadi <amigdadi@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 12:00:00 by amigdadi          #+#    #+#             */
-/*   Updated: 2025/11/26 20:28:42 by amigdadi         ###   ########.fr       */
+/*   Updated: 2025/11/26 21:02:50 by amigdadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_isalnum(int c)
 		|| (c >= 'A' && c <= 'Z')
 		|| (c >= 'a' && c <= 'z'))
 		return (1);
-	return (0);
+	retur
 }
 
 /*int	main(void)
