@@ -1,6 +1,15 @@
-#include "libft.h"
-
-int ft_atoi(const char *str)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: amigdadi <amigdadi@learner.42.tech>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/11/30 15:53:19 by amigdadi          #+#    #+#             */
+/*   Updated: 2025/11/30 16:11:47 by amigdadi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+int	ft_atoi(const char *str)
 {
     int sign = 1;
     long result = 0;
@@ -18,10 +27,16 @@ int ft_atoi(const char *str)
     {
         result = result * 10 + (str[i] - '0');
         i++;
-        if (result * sign > INT_MAX)
-            return (-1);
-        if (result * sign < INT_MIN)
-            return (0);
     }
     return (result * sign);
 }
+/*#include <stdio.h> 
+int main(void)
+{
+    const char *numStr1 = "1   -12345abc";
+    const char *numStr2 = "-2147483648";
+
+    printf("ft_atoi('%s') = %d\n", numStr1, ft_atoi(numStr1));
+    printf("ft_atoi('%s') = %d\n", numStr2, ft_atoi(numStr2));
+    return (0);
+}*/

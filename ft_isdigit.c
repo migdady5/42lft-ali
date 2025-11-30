@@ -6,13 +6,10 @@
 /*   By: amigdadi <amigdadi@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/25 21:58:00 by amigdadi          #+#    #+#             */
-/*   Updated: 2025/11/26 18:54:19 by amigdadi         ###   ########.fr       */
+/*   Updated: 2025/11/30 17:31:04 by amigdadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-int	ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
 		return (1);
