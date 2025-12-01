@@ -81,3 +81,20 @@ Then execute the test binary:
 
 ## Contribution
 Feel free to contribute to the project by submitting pull requests or reporting issues.
+
+## VS Code: Norminate extension
+
+This repository now includes a tiny developer VS Code extension named **Norminate** that helps you run *norminette* from inside VS Code and apply a few small automatic fixes (tabs → spaces, trim trailing whitespace, ensure final newline).
+
+How to try it locally:
+
+1. Open this folder in VS Code
+2. Open Run and Debug → "Launch Extension" then press F5. A new Extension Development Host window opens.
+3. Open a C file in the extension host and run commands from the Command Palette:
+	- `Norminate: Run Norminette` — runs norminette and shows problems in the Problems view
+	- `Norminate: Apply Quick Fixes` — automatically converts tabs to 4 spaces, trims trailing whitespace, and ensures a final newline
+
+Settings:
+- `norminate.norminettePath` — override path or command for the norminette executable (default: `norminette`).
+
+Note: norminette must be installed separately and available in PATH (or you can set a full path in the setting above).

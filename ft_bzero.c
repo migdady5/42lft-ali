@@ -6,17 +6,26 @@
 /*   By: amigdadi <amigdadi@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/30 17:49:40 by amigdadi          #+#    #+#             */
-/*   Updated: 2025/11/30 19:53:54 by amigdadi         ###   ########.fr       */
+/*   Updated: 2025/12/01 12:05:18 by amigdadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
 	unsigned char	*ptr;
+	unsigned int	i;
 
+	i = 0;
 	ptr = (unsigned char *)s;
-	while (n--)
-		*ptr++ = '\0';
+	if (n == 0)
+		return ;
+	while (i != n)
+	{
+		ptr[i] = 0;
+		i++;
+	}
 }
 
 /*int	main(void)
