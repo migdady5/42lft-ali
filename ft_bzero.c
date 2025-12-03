@@ -9,13 +9,12 @@
 /*   Updated: 2025/12/01 12:05:18 by amigdadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
 	unsigned char	*ptr;
-	unsigned int	i;
+	size_t			i;
 
 	i = 0;
 	ptr = (unsigned char *)s;
@@ -27,7 +26,6 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
-
 /*int	main(void)
 {
         char    str1[16] = "testetesteteste";

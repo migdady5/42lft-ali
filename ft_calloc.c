@@ -9,16 +9,17 @@
 /*   Updated: 2025/12/01 12:45:58 by amigdadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "libft.h"
 
-void *ft_calloc(size_t count, size_t size)
+void	*ft_calloc(size_t count, size_t size)
 {
-    void *ptr;
+	void	*ptr;
 
-    ptr = malloc(count * size);
-    if (!ptr)
-        return NULL;
-    ft_bzero(ptr, count * size);
-    return ptr;
+	if (size != 0 && count > ((size_t)-1) / size)
+		return (NULL);
+	ptr = malloc(count * size);
+	if (!ptr)
+		return (NULL);
+	ft_bzero(ptr, count * size);
+	return (ptr);
 }
