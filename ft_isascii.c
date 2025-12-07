@@ -6,11 +6,17 @@
 /*   By: amigdadi <amigdadi@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/30 17:20:09 by amigdadi          #+#    #+#             */
-/*   Updated: 2025/12/01 12:45:58 by amigdadi         ###   ########.fr       */
+/*   Updated: 2025/12/07 16:46:22 by amigdadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_isascii(int c)
 {
-    return (c >= 0 && c <= 127);
+	if (c >= 0 && c <= 127)
+	{
+		return (1);
+	}
+	return (0);
 }

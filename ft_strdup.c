@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <stdio.h> /* only for the test main below */
+
 char	*ft_strdup(const char *s1)
 {
 	char	*dup;
