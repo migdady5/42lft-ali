@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amigdadi <amigdadi@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/25 21:58:00 by amigdadi          #+#    #+#             */
-/*   Updated: 2025/12/01 12:45:57 by amigdadi         ###   ########.fr       */
+/*   Created: 2025/11/30 17:28:35 by amigdadi          #+#    #+#             */
+/*   Updated: 2025/12/01 12:45:56 by amigdadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int	ft_isdigit(int c)
+int	ft_isprint(int c)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
+	return (c >= 32 && c <= 126);
 }
+
 /*int	main(void)
 {
-	int a = '5';
-	int b = 'x';
+	int	tests[] = {' ', '!', 'A', 'z', '0', '~', 31, 127, -1, 200};
+	int	i;
 
-	printf("ft_isdigit('%c') = %d\n", a, ft_isdigit(a));
-	printf("ft_isdigit('%c') = %d\n", b, ft_isdigit(b));
+	i = 0;
+	while (i < (int)(sizeof(tests) / sizeof(tests[0])))
+	{
+		printf("ft_isprint(%3d) = %d\n", tests[i], ft_isprint(tests[i]));
+		i++;
+	}
 	return (0);
 }*/

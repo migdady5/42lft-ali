@@ -1,28 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amigdadi <amigdadi@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/25 21:58:00 by amigdadi          #+#    #+#             */
-/*   Updated: 2025/12/01 12:45:57 by amigdadi         ###   ########.fr       */
+/*   Created: 2025/12/01 12:44:56 by amigdadi          #+#    #+#             */
+/*   Updated: 2025/12/01 12:45:29 by amigdadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
-int	ft_isdigit(int c)
+int ft_toupper(int c)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
+    if (c >= 'a' && c <= 'z')
+        return (c - 32);
+    return (c);
 }
-/*int	main(void)
-{
-	int a = '5';
-	int b = 'x';
-
-	printf("ft_isdigit('%c') = %d\n", a, ft_isdigit(a));
-	printf("ft_isdigit('%c') = %d\n", b, ft_isdigit(b));
-	return (0);
-}*/

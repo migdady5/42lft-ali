@@ -1,28 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amigdadi <amigdadi@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/25 21:58:00 by amigdadi          #+#    #+#             */
-/*   Updated: 2025/12/01 12:45:57 by amigdadi         ###   ########.fr       */
+/*   Created: 2025/12/01 12:43:52 by amigdadi          #+#    #+#             */
+/*   Updated: 2025/12/01 12:45:51 by amigdadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
-int	ft_isdigit(int c)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
-}
-/*int	main(void)
-{
-	int a = '5';
-	int b = 'x';
+	unsigned char *d;
+	const unsigned char *s;
 
-	printf("ft_isdigit('%c') = %d\n", a, ft_isdigit(a));
-	printf("ft_isdigit('%c') = %d\n", b, ft_isdigit(b));
-	return (0);
-}*/
+	d = (unsigned char *)dest;
+	s = (const unsigned char *)src;
+
+	if (d == s || n == 0)
+		return (dest);
+
+	if (d < s)
+	{
+		while (n--)
+			*d++ = *s++;
+	}
+	else
+	{
+		d += n;
+		s += n;
+		while (n--)
+			*(--d) = *(--s);
+	}
+
+	return (dest);
+}

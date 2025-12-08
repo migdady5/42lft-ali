@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amigdadi <amigdadi@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/25 21:58:00 by amigdadi          #+#    #+#             */
-/*   Updated: 2025/12/01 12:45:57 by amigdadi         ###   ########.fr       */
+/*   Created: 2025/12/07 17:32:16 by amigdadi          #+#    #+#             */
+/*   Updated: 2025/12/07 17:32:16 by amigdadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
-int	ft_isdigit(int c)
+char    *ft_substr(char const *s, unsigned int start, size_t len)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
+    char    *str;
+    size_t  i;
+    size_t  s_len;
+    if(!s)
+        return (NULL);
+    s_len = ft_strlen(s);
+    if(start >= s_len)
+        return (null);
+    if(len > s_len - start)
+        len = s_len - start;
+    str = (char *)malloc(sizeof(char) * (len + 1));
 }
-/*int	main(void)
-{
-	int a = '5';
-	int b = 'x';
 
-	printf("ft_isdigit('%c') = %d\n", a, ft_isdigit(a));
-	printf("ft_isdigit('%c') = %d\n", b, ft_isdigit(b));
-	return (0);
-}*/
+

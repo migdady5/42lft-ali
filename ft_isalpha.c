@@ -6,18 +6,14 @@
 /*   By: amigdadi <amigdadi@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/25 18:37:31 by amigdadi          #+#    #+#             */
-/*   Updated: 2025/11/25 21:56:55 by amigdadi         ###   ########.fr       */
+/*   Updated: 2025/12/01 13:59:35 by amigdadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
+
 int	ft_isalpha(int c)
 {
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
 		return (1);
-	else
-		return (0);
+	return (0);
 }
-/*int main()
-{
-	int x = 6;
-	printf("%d\n",(ft_isalpha(x)));
-}*/
