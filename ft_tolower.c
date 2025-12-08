@@ -6,15 +6,14 @@
 /*   By: amigdadi <amigdadi@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 12:44:53 by amigdadi          #+#    #+#             */
-/*   Updated: 2025/12/01 12:45:27 by amigdadi         ###   ########.fr       */
+/*   Updated: 2025/12/08 15:01:51 by amigdadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "libft.h"
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
-    if (c >= 'A' && c <= 'Z')
-        return (c + 32);
-    return (c);
+	if (c >= 'A' && c <= 'Z')
+		return (c + 32);
+	return (c);
 }
