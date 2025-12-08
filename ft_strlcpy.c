@@ -6,7 +6,7 @@
 /*   By: amigdadi <amigdadi@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 12:44:33 by amigdadi          #+#    #+#             */
-/*   Updated: 2025/12/01 12:45:12 by amigdadi         ###   ########.fr       */
+/*   Updated: 2025/12/08 15:20:32 by amigdadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,4 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	}
 	dest[count] = '\0';
 	return (ft_strlen(src));
-}
 }
