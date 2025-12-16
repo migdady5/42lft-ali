@@ -5,55 +5,51 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: amigdadi <amigdadi@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/12 15:11:09 by amigdadi          #+#    #+#             */
-/*   Updated: 2025/12/12 15:11:09 by amigdadi         ###   ########.fr       */
+/*   Created: 2025/12/14 15:02:48 by amigdadi          #+#    #+#             */
+/*   Updated: 2025/12/14 15:05:49 by amigdadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
-static size_t	ft_itoa_len(long n)
+static size_t	count(int n)
 {
-	size_t	len;
+	size_t	i;
 
-	len = 0;
-	if (n <= 0)
-		len = 1;
-	while (n != 0)
+	i = 0;
+	if (n < 0)
+		i++;
+	while (n)
 	{
+		i++;
 		n /= 10;
-		len++;
 	}
-	return (len);
+	return (i);
 }
 
 char	*ft_itoa(int n)
 {
-	char	*str;
-	long	n2;
-	size_t	len;
-	int		neg;
+	char	*result;
+	size_t	digits;
 
-	n2 = (long)n;
-	neg = 0;
-	if (n2 < 0)
-	{
-		neg = 1;
-		n2 = -n2;
-	}
-	len = ft_itoa_len((long)n);
-	str = (char *)malloc(sizeof(char) * (len + 1));
-	if (!str)
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
+	if (n == 0)
+		return (ft_strdup("0"));
+	digits = count(n);
+	result = malloc(digits + 1);
+	if (!result)
 		return (NULL);
-	str[len] = '\0';
-	if (n2 == 0)
-		str[0] = '0';
-	while (n2 > 0)
+	result[digits] = '\0';
+	if (n < 0)
 	{
-		len--;
-		str[len] = (char)((n2 % 10) + '0');
-		n2 /= 10;
+		result[0] = '-';
+		n = -n;
 	}
-	if (neg)
-		str[0] = '-';
-	return (str);
+	while (n)
+	{
+		result[--digits] = (n % 10) + '0';
+		n /= 10;
+	}
+	return (result);
 }

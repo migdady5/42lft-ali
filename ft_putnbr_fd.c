@@ -6,7 +6,7 @@
 /*   By: amigdadi <amigdadi@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/14 00:03:19 by amigdadi          #+#    #+#             */
-/*   Updated: 2025/12/14 00:03:19 by amigdadi         ###   ########.fr       */
+/*   Updated: 2025/12/14 15:15:05 by amigdadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -22,6 +22,12 @@ void	ft_putnbr_fd(int n, int fd)
 		num = -num;
 	}
 	if (num >= 10)
-		ft_putnbr_fd((int)(num / 10), fd);
+		ft_putnbr_fd((num / 10), fd);
 	ft_putchar_fd((char)((num % 10) + '0'), fd);
 }
+/*#include <stdio.h>
+int main()
+{
+	ft_putnbr_fd(-3324213,1);
+}
+*/
